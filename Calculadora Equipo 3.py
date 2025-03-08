@@ -1,4 +1,6 @@
-
+#Creado por Rodrigo Rodriguez
+def suma(a,b):
+    return a+b
 
 #Creada por Luis Enrique
 def division(a, b):
