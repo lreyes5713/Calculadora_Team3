@@ -6,6 +6,9 @@ def division(a, b):
         return "Error: Division por cero"
         return a / b
 
+#Creada por Brenda
+def multiplicacion(a, b):
+    return a * b
 
 
 if __name__ == "__main__":
