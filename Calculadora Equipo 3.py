@@ -9,16 +9,16 @@ def division(a, b):
 
 
 if __name__ == "__main__":
-    print("Selecciona una operaciÃ³n:")
+    print("Selecciona una operacion:")
     print("1. Suma")
     print("2. Resta")
-    print("3. MultiplicaciÃ³n")
-    print("4. DivisiÃ³n")
+    print("3. Multiplicacion")
+    print("4. Division")
     
-    operacion = input("Ingresa el nÃºmero de la operaciÃ³n: ")
+    operacion = input("Ingresa el nÃºmero de la operacion: ")
     
-    num1 = float(input("Ingresa el primer nÃºmero: "))
-    num2 = float(input("Ingresa el segundo nÃºmero: "))
+    num1 = float(input("Ingresa el primer numero: "))
+    num2 = float(input("Ingresa el segundo numero: "))
     
     if operacion == "1":
         print(f"El resultado es: {suma(num1, num2)}")
@@ -29,4 +29,4 @@ if __name__ == "__main__":
     elif operacion == "4":
         print(f"El resultado es: {division(num1, num2)}")
     else:
-        print("Opcion no vÃ¡lida")
+        print("Opcion no valida")
