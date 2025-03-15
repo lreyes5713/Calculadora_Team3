@@ -1,5 +1,5 @@
 import pytest
-from calculadora import sumar, restar, multiplicar, dividir, calcular
+from Calculadora_Equipo_3 import sumar, restar, multiplicar, dividir, calcular
 
 def test_sumar():
     assert sumar(2, 3) == 5.0
