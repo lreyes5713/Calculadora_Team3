@@ -68,9 +68,9 @@ def calculo (expresion):
         return resta (num1, num2)
     elif op == '*':
         return multiplicacion (num1, num2)
-    elif op == '/'
+    elif op == '/':
         return division (num1, num2)
-    else    
+    else:    
         return "Operacion invalida"
 
 '''
@@ -98,3 +98,9 @@ if __name__ == "__main__":
         print("Opcion no valida")
 
 '''
+
+if __name__ == "__main__":
+    print("Ingresa tu operacion (ejemplo, 2 + 3.5):")
+    expresion = input("Expresion: ")
+    resultado = calculo(expresion)
+    print(f"Resultado: {resultado}")
