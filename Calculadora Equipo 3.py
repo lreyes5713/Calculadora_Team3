@@ -1,17 +1,40 @@
-#Creado por Rodrigo Rodriguez
-def suma(a,b):
-    return a+b
+# Creado por Rodrigo Rodriguez
+def suma(a, b):
+    try:
+        a = float(a)
+        b = float(b)
+        return float(a + b)  # Verifica resultado decimal
+    except ValueError:
+        return "Error: Numeros invalidos"
 
-#Creada por Luis Enrique
+# Creada por Luis Enrique
 def division(a, b):
-    if b == 0:
-        return "Error: Division por cero"
-        return a / b
+    try:
+        a = float(a)
+        b = float(b)
+        if b == 0:
+            return "Error: Division por cero"
+        return float(a / b)  # Verifica resultado decimal
+    except ValueError:
+        return "Error: Numeros invalidos"
 
-#Creada por Brenda
+# Creada por Brenda
 def multiplicacion(a, b):
-    return a * b
+    try:
+        a = float(a)
+        b = float(b)
+        return float(a * b)  # Verifica resultado decimal
+    except ValueError:
+        return "Error: Invalid input"
 
+
+def resta (a, b):
+    try:
+        a = float(a)
+        b = float(b)
+        return float(a - b)  # Verifica resultado decimal
+    except ValueError:
+        return "Error: Invalid input"
 
 if __name__ == "__main__":
     print("Selecciona una operacion:")
@@ -20,7 +43,7 @@ if __name__ == "__main__":
     print("3. Multiplicacion")
     print("4. Division")
     
-    operacion = input("Ingresa el nÃºmero de la operacion: ")
+    operacion = input("Ingresa el numero de la operacion: ")
     
     num1 = float(input("Ingresa el primer numero: "))
     num2 = float(input("Ingresa el segundo numero: "))
