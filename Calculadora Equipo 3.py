@@ -36,6 +36,44 @@ def resta (a, b):
     except ValueError:
         return "Error: Invalid input"
 
+
+def calculo (expresion):
+    operadores_permitidos = ['+', '-', '*', '/']
+    num1 = ''
+    num2 = ''
+    op = ''
+
+    for char in expresion:
+        if char.isdigit() or char == '.':
+            if not op:
+                    num1 += char
+            else:
+                num2 += char
+        elif char in operadores_permitidos:
+            if not op:
+                    op = char
+            else:
+                return "Expresion invalida, demasiados operadores"
+        elif char == ' ':
+            continue
+        else:
+            return "Error caracteres invalidos"
+
+    if not num1 or not num2 or not op:
+        return "Expresion incompleta"
+                
+    if op == '+':
+        return suma (num1, num2)
+    elif op == '-':
+        return resta (num1, num2)
+    elif op == '*':
+        return multiplicacion (num1, num2)
+    elif op == '/'
+        return division (num1, num2)
+    else    
+        return "Operacion invalida"
+
+'''
 if __name__ == "__main__":
     print("Selecciona una operacion:")
     print("1. Suma")
@@ -58,3 +96,5 @@ if __name__ == "__main__":
         print(f"El resultado es: {division(num1, num2)}")
     else:
         print("Opcion no valida")
+
+'''
