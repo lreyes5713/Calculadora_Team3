@@ -168,7 +168,7 @@ def calcular(expresion):
 
         elif expresion[indice] in ('+', '-', '*', '/'):  # Si el caracter es un operador
             # Mientras haya operadores y la precedencia del último operador sea mayor o igual que la del operador actual
-            while operadores and precedencia(operadores[-1]) >= precedencia(expresion[indice]):  
+            while operadores and precedencia(operadores[-1]) >= precedencia(expresion[indice]):
                 error = procesar_operacion(operadores, valores)  # Realiza la operación
                 if error:
                     return error  # Si hay un error, lo devuelve
