@@ -61,4 +61,3 @@ def test_integracion_expresion2():
     resultado_esperado = float(valor1_op) * float(valor2_op)
     assert calcular(expresion) == resultado_esperado
     assert calcular(expresion) == 137.475
-    
