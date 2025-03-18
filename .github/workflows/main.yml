@@ -46,4 +46,4 @@ jobs:
     
     - name: Test with pytest
       run:
-        pytest Calculadora_Team3/test_calculadora.py -v
+        pytest test_calculadora.py -v
