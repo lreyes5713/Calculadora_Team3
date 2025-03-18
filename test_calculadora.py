@@ -34,7 +34,7 @@ def test_dividir():
 def test_calcular_entrada_invalida():
     assert calcular("abc") == "Error: Expresión inválida"
     assert calcular("2 +") == "Error: Expresión inválida"
-    assert calcular("2 + 3 + 4") == "Error: Expresión inválida"
+    assert calcular("+ 3 + 4") == "Error: Expresión inválida"
 
 
 def test_integracion_expresion1():
