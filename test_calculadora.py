@@ -1,11 +1,13 @@
 import pytest
 from Calculadora_Equipo_3 import sumar, restar, multiplicar, dividir, calcular
 
+
 def test_sumar():
     assert sumar(2, 3) == 5.0
     assert sumar(-1, 1) == 0.0
     assert sumar(2.5, 3.5) == 6.0
     assert sumar("2", "3") == 5.0
+
 
 def test_restar():
     assert restar(5, 2) == 3.0
@@ -13,11 +15,13 @@ def test_restar():
     assert restar(5.5, 2.5) == 3.0
     assert restar("5", "2") == 3.0
 
+
 def test_multiplicar():
     assert multiplicar(2, 3) == 6.0
     assert multiplicar(-1, 5) == -5.0
     assert multiplicar(2.5, 2) == 5.0
     assert multiplicar("2", "3") == 6.0
+
 
 def test_dividir():
     assert dividir(6, 2) == 3.0
@@ -26,10 +30,12 @@ def test_dividir():
     assert dividir("6", "2") == 3.0
     assert dividir(5, 0) == "Error: División por cero"
 
+
 def test_calcular_entrada_invalida():
     assert calcular("abc") == "Error: Expresión inválida"
     assert calcular("2 +") == "Error: Expresión inválida"
     assert calcular("2 + 3 + 4") == "Error: Expresión inválida"
+
 
 def test_integracion_expresion1():
     expresion = "(5+5)*(1.25-0.75)"
@@ -43,6 +49,7 @@ def test_integracion_expresion1():
     assert calcular(expresion) == resultado_esperado
     assert calcular(expresion) == 5.0
 
+
 def test_integracion_expresion2():
     expresion = "(8+7/5)*(15-3/8)"
     # Evaluar manualmente la expresión usando la función calcular
@@ -54,3 +61,4 @@ def test_integracion_expresion2():
     resultado_esperado = float(valor1_op) * float(valor2_op)
     assert calcular(expresion) == resultado_esperado
     assert calcular(expresion) == 137.475
+    
