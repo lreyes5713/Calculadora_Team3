@@ -176,12 +176,12 @@ def calcular(expresion):
 
         indice += 1  # Avanza al siguiente caracter
 
-    while operadores:  # Mientras haya operadores pendientes
+    while operadores and (valores > 1):  # Mientras haya operadores pendientes
         error = procesar_operacion(operadores, valores)  # Realiza la operación
         if error:
             return error  # Si hay un error, lo devuelve
 
-    if len(valores) == 1:  # Si queda un solo valor en la lista de valores
+    if len(valores) == 1 and operadores == 0:  # Si queda un solo valor en la lista de valores
         return valores[0]  # Devuelve el resultado
     else:
         return "Error: Expresión inválida"  # Si no, devuelve un mensaje de error
