@@ -18,6 +18,7 @@ def sumar(a, b):
     except ValueError:
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
 
+
 # Creada por Luis Enrique
 def dividir(a, b):
     """
@@ -41,6 +42,7 @@ def dividir(a, b):
     except ValueError:
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
 
+
 # Creada por Brenda
 def multiplicar(a, b):
     """
@@ -60,6 +62,7 @@ def multiplicar(a, b):
         return float(a * b)  # Realiza la multiplicación y asegura que el resultado sea decimal
     except ValueError:
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
+
 
 # Creada por (Someone - Adding subtraction)
 def restar(a, b):
@@ -81,6 +84,7 @@ def restar(a, b):
     except ValueError:
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
 
+
 def precedencia(operador):
     """
     Función para determinar la precedencia de un operador.
@@ -97,6 +101,7 @@ def precedencia(operador):
     elif operador in ('*', '/'):
         return 2  # Multiplicación y división tienen la misma precedencia (alta)
     return 0  # Paréntesis tienen la precedencia más baja
+
 
 def procesar_operacion(operadores, valores):
     """
@@ -126,6 +131,7 @@ def procesar_operacion(operadores, valores):
             return resultado  # Propaga el error si es una división por cero
         valores.append(resultado)  # Agrega el resultado a la lista de valores
     return None
+
 
 def calcular(expresion):
     """
@@ -161,7 +167,8 @@ def calcular(expresion):
             operadores.pop()  # Elimina el paréntesis de apertura
 
         elif expresion[indice] in ('+', '-', '*', '/'):  # Si el caracter es un operador
-            while operadores and precedencia(operadores[-1]) >= precedencia(expresion[indice]):  # Mientras haya operadores y la precedencia del último operador sea mayor o igual que la del operador actual
+            # Mientras haya operadores y la precedencia del último operador sea mayor o igual que la del operador actual
+            while operadores and precedencia(operadores[-1]) >= precedencia(expresion[indice]):  
                 error = procesar_operacion(operadores, valores)  # Realiza la operación
                 if error:
                     return error  # Si hay un error, lo devuelve
@@ -178,6 +185,7 @@ def calcular(expresion):
         return valores[0]  # Devuelve el resultado
     else:
         return "Error: Expresión inválida"  # Si no, devuelve un mensaje de error
+
 
 if __name__ == "__main__":
     print("Ingresa una expresión (ej. 5+5 * 7 - (3-8)):")
