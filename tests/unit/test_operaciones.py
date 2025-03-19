@@ -1,0 +1,28 @@
+import pytest
+from src.calculadora.operaciones import sumar, restar, multiplicar, dividir
+
+test_inputs = {"sumas": [(2, 3, 5.0), (-1, 1, 0.0), (2.5, 3.5, 6.0), ("2", "3", 5.0)],
+               "restas": [(5, 2, 3.0), (1, -1, 2.0), (5.5, 2.5, 3.0), ("5", "2", 3.0)],
+               "multis": [(2, 3, 6.0), (-1, 5, -5.0), (2.5, 2, 5.0), ("2", "3", 6.0)],
+               "divis": [(6, 2, 3.0), (5, -2, -2.5), (2.5, 0.5, 5.0), ("6", "2", 3.0), (5, 0, "Error: División por cero")]
+               }
+
+
+@pytest.mark.parametrize("num1, num2, sum", test_inputs["sumas"])
+def test_sumar(num1, num2, sum):
+    assert sumar(num1, num2) == sum
+
+
+@pytest.mark.parametrize("num1, num2, res", test_inputs["restas"])
+def test_restar(num1, num2, res):
+    assert restar(num1, num2) == res
+
+
+@pytest.mark.parametrize("num1, num2, mul", test_inputs["multis"])
+def test_multiplicar(num1, num2, mul):
+    assert multiplicar(num1, num2) == mul
+
+
+@pytest.mark.parametrize("num1, num2, div", test_inputs["divis"])
+def test_dividir(num1, num2, div):
+    assert dividir(num1, num2) == div
