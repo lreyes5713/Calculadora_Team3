@@ -45,5 +45,6 @@ jobs:
         if [ -f Calculadora_Team3/requirements.txt ]; then pip install -r ejemplo/requirements.txt; fi
     
     - name: Test with pytest
-      run:
+      run: |
+        $env:PYTHONPATH="."
         pytest -v
