@@ -1,4 +1,4 @@
-from src.calculadora.operaciones import sumar, restar, multiplicar, dividir, potencia
+from src.calculadora.operaciones import sumar, restar, multiplicar, dividir, potenciar
 
 
 def precedencia(operador):
@@ -49,7 +49,7 @@ def procesar_operacion(operadores, valores):
             return resultado  # Propaga el error si es una división por cero
         valores.append(resultado)  # Agrega el resultado a la lista de valores
     elif operador == '^':
-        valores.append(potencia(valor1, valor2)) # Potencia el primer valor al segundo y lo agrega a la lista de valores
+        valores.append(potenciar(valor1, valor2)) # Potencia el primer valor al segundo y lo agrega a la lista de valores
     return None
 
 

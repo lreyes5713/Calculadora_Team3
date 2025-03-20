@@ -85,7 +85,7 @@ def multiplicar(a, b):
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
 
 
-def potencia(a,b):
+def potenciar(a,b):
     """
     Función para realizar potencia de un numero.
 
