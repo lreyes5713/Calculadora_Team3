@@ -1,4 +1,4 @@
-from src.calculadora.operaciones import sumar, restar, multiplicar, dividir
+from src.calculadora.operaciones import sumar, restar, multiplicar, dividir, potencia
 
 
 def precedencia(operador):
@@ -16,6 +16,8 @@ def precedencia(operador):
         return 1  # Suma y resta tienen la misma precedencia (baja)
     elif operador in ('*', '/'):
         return 2  # Multiplicación y división tienen la misma precedencia (alta)
+    if operador in ('^'):
+        return 3 # Potencia tiene la precedencia mas alta (suprema)
     return 0  # Paréntesis tienen la precedencia más baja
 
 
@@ -46,6 +48,8 @@ def procesar_operacion(operadores, valores):
         if isinstance(resultado, str):
             return resultado  # Propaga el error si es una división por cero
         valores.append(resultado)  # Agrega el resultado a la lista de valores
+    elif operador == '^':
+        valores.append(potencia(valor1, valor2)) # Potencia el primer valor al segundo y lo agrega a la lista de valores
     return None
 
 
@@ -82,7 +86,7 @@ def calcular(expresion):
                     return error  # Si hay un error, lo devuelve
             operadores.pop()  # Elimina el paréntesis de apertura
 
-        elif expresion[indice] in ('+', '-', '*', '/'):  # Si el caracter es un operador
+        elif expresion[indice] in ('+', '-', '*', '/', '^'):  # Si el caracter es un operador
             # Mientras haya operadores y la precedencia del último operador sea mayor o igual que la del operador actual
             while operadores and precedencia(operadores[-1]) >= precedencia(expresion[indice]) and len(valores) > 1:
                 error = procesar_operacion(operadores, valores)  # Realiza la operación
