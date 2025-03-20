@@ -17,7 +17,7 @@ def precedencia(operador):
     elif operador in ('*', '/'):
         return 2  # Multiplicación y división tienen la misma precedencia (alta)
     if operador in ('^'):
-        return 3 # Potencia tiene la precedencia mas alta (suprema)
+        return 3  # Potencia tiene la precedencia mas alta (suprema)
     return 0  # Paréntesis tienen la precedencia más baja
 
 
@@ -49,7 +49,7 @@ def procesar_operacion(operadores, valores):
             return resultado  # Propaga el error si es una división por cero
         valores.append(resultado)  # Agrega el resultado a la lista de valores
     elif operador == '^':
-        valores.append(potenciar(valor1, valor2)) # Potencia el primer valor al segundo y lo agrega a la lista de valores
+        valores.append(potenciar(valor1, valor2))  # Potencia el primer valor al segundo y lo agrega a la lista de valores
     return None
 
 
