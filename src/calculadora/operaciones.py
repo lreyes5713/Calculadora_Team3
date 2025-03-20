@@ -83,3 +83,23 @@ def multiplicar(a, b):
         return float(a * b)  # Realiza la multiplicación y asegura que el resultado sea decimal
     except ValueError:
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
+
+
+def potencia(a,b):
+    """
+    Función para realizar potencia de un numero.
+
+    Args:
+        a: El numero base.
+        b: El exponente.
+
+    Returns:
+        El valor a elevado al valor b.
+        Si la entrada no es válida, devuelve un mensaje de error.
+    """
+    try:
+        a = float(a)
+        b = float(b)
+        return float(a**b)
+    except ValueError:
+        return "Error: Entrada inválida"
