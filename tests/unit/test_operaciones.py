@@ -28,6 +28,7 @@ def test_multiplicar(num1, num2, mul):
 def test_dividir(num1, num2, div):
     assert dividir(num1, num2) == div
 
+
 @pytest.mark.parametrize("num1, num2, pot", test_inputs["pots"])
 def test_potenciar(num1, num2, pot):
     assert potenciar(num1, num2) == pot
