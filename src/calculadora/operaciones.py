@@ -117,7 +117,7 @@ def potenciar(a, b):
         Si la entrada no es válida o negativa, devuelve un mensaje de error.
     """
 
-    def calcular_raiz_cuadrada(numero):
+    def raiz_cuadrada(numero):
         if numero < 0:
             return "No se puede calcular la raíz cuadrada de un número negativo."
         else:
