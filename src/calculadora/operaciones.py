@@ -106,6 +106,17 @@ def potenciar(a, b):
     
     # Raíz cuadrada
 
+    """
+    Función para calcular la raíz cuadrada de un número.
+
+    Args:
+        numero: El número del que se desea calcular la raíz cuadrada.
+
+    Returns:
+        La raíz cuadrada de 'numero' como un número decimal.
+        Si la entrada no es válida o negativa, devuelve un mensaje de error.
+    """
+
     def calcular_raiz_cuadrada(numero):
         if numero < 0:
             return "No se puede calcular la raíz cuadrada de un número negativo."
