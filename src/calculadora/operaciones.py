@@ -117,9 +117,9 @@ def raiz_cuadrada(numero):
         Si la entrada no es válida o negativa, devuelve un mensaje de error.
     """
     try:
-        numero = float(numero)  # Convierte el valor a float
+        numero = float(numero)
         if numero < 0:
             return "No se puede calcular la raíz cuadrada de un número negativo."
         return numero ** 0.5
     except ValueError:
-        return "Error: Entrada inválida" 
+        return "Error: Entrada inválida"
