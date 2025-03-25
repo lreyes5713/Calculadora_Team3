@@ -123,3 +123,4 @@ def raiz_cuadrada(numero):
         return numero ** 0.5
     except ValueError:
         return "Error: Entrada inválida"
+    

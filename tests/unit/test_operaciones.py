@@ -34,6 +34,7 @@ def test_dividir(num1, num2, div):
 def test_potenciar(num1, num2, pot):
     assert potenciar(num1, num2) == pot
 
+
 @pytest.mark.parametrize("num, res", test_inputs["raices"])
 def test_raiz_cuadrada(num, res):
     assert raiz_cuadrada(num) == res
