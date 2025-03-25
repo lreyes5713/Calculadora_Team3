@@ -104,8 +104,8 @@ def potenciar(a, b):
     except ValueError:
         return "Error: Entrada inválida"
     
-    # Raíz cuadrada
 
+def raiz_cuadrada(numero):
     """
     Función para calcular la raíz cuadrada de un número.
 
@@ -116,10 +116,10 @@ def potenciar(a, b):
         La raíz cuadrada de 'numero' como un número decimal.
         Si la entrada no es válida o negativa, devuelve un mensaje de error.
     """
-
-    def raiz_cuadrada(numero):
+    try:
+        numero = float(numero)  # Convierte el valor a float
         if numero < 0:
             return "No se puede calcular la raíz cuadrada de un número negativo."
-        else:
-            return numero ** 0.5
-
+        return numero ** 0.5
+    except ValueError:
+        return "Error: Entrada inválida" 
