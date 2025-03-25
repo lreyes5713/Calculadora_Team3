@@ -103,8 +103,8 @@ def potenciar(a, b):
         return float(a**b)
     except ValueError:
         return "Error: Entrada inválida"
-    
-    
+
+
 def raiz_cuadrada(numero):
     """
     Función para calcular la raíz cuadrada de un número.
@@ -123,4 +123,3 @@ def raiz_cuadrada(numero):
         return numero ** 0.5
     except ValueError:
         return "Error: Entrada inválida"
-    
