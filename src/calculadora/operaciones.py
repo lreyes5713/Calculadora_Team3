@@ -119,7 +119,7 @@ def raiz_cuadrada(numero):
     try:
         numero = float(numero)
         if numero < 0:
-            return "Error: No se puede calcular la raíz cuadrada de un número negativo."
+            return "Error: No se puede calcular la raíz cuadrada de un número negativo"
         return numero ** 0.5
     except ValueError:
         return "Error: Entrada inválida"
