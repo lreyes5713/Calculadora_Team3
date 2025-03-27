@@ -19,7 +19,6 @@ def sumar(a, b):
         return "Error: Entrada inválida"  # Devuelve un mensaje de error si la entrada no es un número válido
 
 
-# Creada por (Someone - Adding subtraction)
 def restar(a, b):
     """
     Función para restar dos números.
