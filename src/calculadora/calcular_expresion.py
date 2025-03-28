@@ -107,15 +107,14 @@ def calcular(expresion):
             if bandera:
                 return "Error: Operadores consecutivos no permitidos"  # Retorna error por operadores consecutivos
             # Resuelve operadores de mayor o igual precedencia antes de agregar el nuevo
-            while (operadores and operadores[-1] != '(' and 
-                   precedencia(operadores[-1]) >= precedencia(expresion[indice])):  # Mientras haya operadores con mayor o igual precedencia
+            while (operadores and operadores[-1] != '(' and precedencia(operadores[-1]) >= precedencia(expresion[indice])):  # Mientras haya operadores con mayor o igual precedencia
                 error = procesar_operacion(operadores, valores)  # Procesa la operación
                 if error:  # Si hay un error
                     return error  # Retorna el error
             operadores.append(expresion[indice])  # Añade el operador a la lista
             bandera = True
 
-        elif expresion[indice:indice+4] == 'sqrt':  # Si encuentra "sqrt"
+        elif expresion[indice:indice + 4] == 'sqrt':  # Si encuentra "sqrt"
             operadores.append('sqrt')  # Añade "sqrt" a la lista de operadores
             indice += 3   # Avanza el índice más allá de "sqrt"
             bandera = True
