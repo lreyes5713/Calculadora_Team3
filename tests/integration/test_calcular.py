@@ -2,9 +2,13 @@ import pytest
 from src.calculadora.calcular_expresion import calcular
 
 
-@pytest.mark.parametrize("expresion", [("abc"), ("2 +"), ("+ 3 + 4")])
+@pytest.mark.parametrize("expresion", [("abc")])
 def test_calcular_entrada_invalida(expresion):
     assert calcular(expresion) == "Error: Expresión inválida"
+
+@pytest.mark.parametrize("expresion", [("2 +"), ("+ 3 + 4")])
+def test_calcular_operandos_faltantes(expresion):
+    assert calcular(expresion) == "Error: Faltan operandos"
 
 
 def test_integracion_expresion1():
