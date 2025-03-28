@@ -46,6 +46,8 @@ def procesar_operacion(operadores, valores):
         valores.append(resultado)  # Añade el resultado a la lista de valores
 
     else:  # Si el operador es binario (necesita dos valores +,-,*,/,^)
+        if len(valores) < 2:  # Verifica que haya al menos dos valores
+            return "Error: Faltan operandos"  # Retorna error si faltan operandos
         valor2 = valores.pop()  # Obtiene el último valor
         valor1 = valores.pop()  # Obtiene el penúltimo valor
         if operador == '+':  # Si el operador es suma
