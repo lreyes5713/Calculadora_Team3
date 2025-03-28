@@ -18,8 +18,8 @@ def precedencia(operador):
         return 2  # Multiplicación y división tienen la misma precedencia (alta)
     elif operador == ('^'):
         return 3  # Mayor precedencia para potencia
-    elif operador == 'sqrt':  
-        return 4   #  Máxima precedencia para raíz cuadrada 
+    elif operador == 'sqrt':
+        return 4   # Máxima precedencia para raíz cuadrada
     return 0  # Paréntesis tienen la precedencia más baja
 
 
@@ -49,20 +49,19 @@ def procesar_operacion(operadores, valores):
         valor2 = valores.pop()  # Obtiene el último valor
         valor1 = valores.pop()  # Obtiene el penúltimo valor
         if operador == '+':  # Si el operador es suma
-            valores.append(sumar(valor1,valor2)) # Realiza suma y agrega resultado
+            valores.append(sumar(valor1, valor2))  # Realiza suma y agrega resultado
         elif operador == '-':  # Si el operador es resta
-            valores.append(restar(valor1,valor2))  # Realiza resta y agrega resultado
+            valores.append(restar(valor1, valor2))  # Realiza resta y agrega resultado
         elif operador == '*':  # Si el operador es multiplicación
-            valores.append(multiplicar(valor1,valor2))  # Realiza multiplicación y agrega resultado
+            valores.append(multiplicar(valor1, valor2))  # Realiza multiplicación y agrega resultado
         elif operador == '/':  # Si el operador es división
             resultado = dividir(valor1, valor2)  # Divide los valores
             if isinstance(resultado, str):
-                    return resultado # Propaga el error si lo hay
-            valores.append(resultado) # Agrega resultado
+                return resultado  # Propaga el error si lo hay
+            valores.append(resultado)  # Agrega resultado
         elif operador == '^':  # Si el operador es potencia
             valores.append(potenciar(valor1, valor2))  # Realiza potencia y agrega resultado
     return None  # Retorna None si todo salió bien
-
 
 
 def calcular(expresion):
@@ -79,7 +78,7 @@ def calcular(expresion):
     valores = []  # Lista para almacenar los valores numéricos
     operadores = []  # Lista para almacenar los operadores
     indice = 0  # Índice para recorrer la expresión
-    bandera = False #Bandera para detectar operadores consecutivos
+    bandera = False  # Bandera para detectar operadores consecutivos
 
     while indice < len(expresion):
         if expresion[indice].isdigit() or expresion[indice] == '.':  # Si el caracter es un dígito o un punto decimal
